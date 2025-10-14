@@ -1,0 +1,22 @@
+p {
+    color: #39C5BB;
+    background: #ff3366;
+    padding: 20px 50px 20px 10px;
+    margin: 50px;
+}
+
+body {
+    background-image: url("images/key.png");
+    background-size: cover;
+}
+
+.high1 {
+    background: black;
+}
+
+.high2 {
+    background: green;
+}
+#key123 {
+    width: 300px;
+}
