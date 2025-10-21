@@ -1,0 +1,181 @@
+p {
+    color: #ff0000;
+    background: #2d9106;
+    padding: 20px 50px 20px 10px;
+    margin: 50px;
+}
+
+body {
+    background-image: url("images/nintendo_world.jpg");
+    background-size: cover;
+}
+
+.high1 {
+    background: black;
+}
+
+.high2 {
+    background: rgb(0, 174, 255);
+}
+
+.bottom-column {
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    max-height: 50vh;
+}
+
+.bottom-column-right {
+    position: fixed;
+    bottom: 0;
+    right: 10%;
+    max-height: 50vh;
+}
+
+#mario_01 {
+    width: 150px;
+}
+
+#goomba {
+    width: 150px;
+}
+
+#luigi {
+    width: 160px;
+}
+
+#mario_01:hover {
+    animation: jump 0.5s ease;
+}
+
+.jump {
+    animation: jump 0.5s ease;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-120px);
+    }
+
+
+    60% {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#mario_01:hover+#goomba {
+    animation: shake 0.5s ease;
+}
+
+#mario_01.jump+#goomba {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+
+    59% {
+        transform: translateX(0);
+    }
+
+
+    60% {
+        transform: translateX(-20px);
+    }
+
+    75% {
+        transform: translateX(20px);
+    }
+
+    90% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+
+}
+
+/* 让输出区横向排 3 个卡片 */
+#output {
+  display: flex;
+  flex-wrap: wrap;       /* 窄屏时自动换行 */
+  gap: 24px;
+  margin: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* 单张卡片（纯色背景，无半透明） */
+.card {
+  background: #2d9106;
+  color: #111;
+  border: 1px solid #2d9106;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  width: clamp(260px, 30vw, 420px);
+}
+
+/* 卡片内标题与正文 */
+.card h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+}
+
+/* 由于你全站 p 标签有绿色背景，这里在卡片内把它覆盖为透明 */
+#output .card p {
+  background: transparent;   /* 覆盖全局 p 的绿色背景 */
+  margin: 0;
+  padding: 0;
+  color: #111;
+}
+
+/* Environment elements 行内小标签 */
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  border: 1px solid #374151;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: #fff;          /* 纯色，不透明 */
+  color: #111;
+}
+
+#action-box {
+  display: flex;
+  flex-direction: row;  /* 如果你想让分数和按钮横着排 */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0 auto;        /* ✅ 让整块水平居中 */
+}

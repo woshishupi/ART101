@@ -1,19 +1,9 @@
-let totalNumber = 0;
-
-//add a button titled click me
-
-$("#needy-button").click( function() {
-
- totalNumber = totalNumber + 3;    
-
-let sentence = "EXP =";;
- $("#needy-button").html( sentence + totalNumber );
+let count = 0;
+let colors = ["Orchid", "Coral", "HotPink", "Plum"];
+$("#needy-button").click(function () {
+    let remainder = count % colors.length;
+    $("#needy-button").html("Clicks " + count + " " + colors[remainder]);
+    $("body").css("background-color", colors[remainder]);
+    count = count + 1;
 });
-//when it is clicked
 
-//show how many times
-//add one to the total number
-//show the total number
-//on our button
-//show "Clicked total number times"
-//a top limit
