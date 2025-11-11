@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- All techy stuff goes here, inside HEAD -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Overall title of your page -->
+    <title>Lab 5</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="lab7.css">
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Link to external JavaScript file -->
+    <script src="lab7.js" defer></script>
+</head>
+
+<body>
+    <!-- Main content goes here, inside BODY -->
+    <h1>Lab 7</h1>
+    <div class="nice-block"><span>more</span>
+        <p>Splatoon 3 is one of the best games I've played on the Switch 2. It has a unique gameplay mechanic where the
+            character can transform into an octopus and dive into the ink.</p>
+    </div>
+    <div class="nice-block"><span>more</span>
+        <p>My favorite game is Outer Wilds. It's a game where you explore a miniature universe.</p>
+    </div>
+    <div class="nice-block"><span>more</span>
+        <p>I am a UCSC student majoring in AGPM. I am currently taking the Art101 course.</p>
+
+</body>
+
+</html>
+##This script uses the jQuery selector nice-block span. It selects the <span> buttons inside .nice-block. When a button
+    is clicked, this refers to the clicked button; it then finds the outer <div> and uses toggleClass("more") to toggle
+        expand or collapse. The CSS makes nice-block show only a small portion of the text by default, and adding more
+        will expand it. So the script checks the button text: if it is more it changes to less, otherwise it changes
+        back to more. The overall logic is that clicking a button expands only that block and toggles the button text.
